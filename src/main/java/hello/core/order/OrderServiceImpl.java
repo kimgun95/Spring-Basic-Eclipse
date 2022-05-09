@@ -11,7 +11,10 @@ public class OrderServiceImpl implements OrderService {
 	private final MemberRepository memberRepository;
 	private final DiscountPolicy discountPolicy;
 	
-	
+	//테스트 용도
+    public MemberRepository getMemberRepository() {
+        return memberRepository;
+    }
 	
 	public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
 		this.memberRepository = memberRepository;
