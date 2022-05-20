@@ -12,7 +12,9 @@ import hello.core.member.MemberService;
 public class AutoAppConfigTest {
 	@Test
 	void basicScan() {
+		// 설정 정보를 넘겨준다
 		ApplicationContext ac = new AnnotationConfigApplicationContext(AutoAppConfig.class);
+		
 		MemberService memberService = ac.getBean(MemberService.class);
 		assertThat(memberService).isInstanceOf(MemberService.class);
 	}
